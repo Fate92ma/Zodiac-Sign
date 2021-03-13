@@ -1,17 +1,17 @@
 // Variables
 let year = document.getElementById("year"),
-    
+
     month = document.getElementById("month"),
-    
+
     day = document.getElementById("day"),
-    
+
     find = document.getElementById("find"),
-    
+
     result = document.getElementById("result"),
-    
+
     txt = "Your <b>Zodiac Sign</b> is: ",
-    
-    dateToTest, getMonth, getYear, getDay;
+
+    getMonth, getYear, getDay;
 
 // Events
 find.addEventListener("click", mySign);
@@ -19,20 +19,7 @@ find.addEventListener("click", mySign);
 /**************************************************************************************************/
 
 // function to find your zodiac sign based on your birth day
-function mySign() {
-
-    getYear = year.value;
-    getMonth = month.value - 1;
-    getDay = day.value;
-    
-    // if any of inputs are empty
-    if (getYear == "" || getMonth == "" || getDay == "") {
-
-        alert("Please Enter Your Birth Date To Continue")
-
-        return false
-
-    }
+function mySign(getYear = year.value, getMonth = month.value - 1, getDay = day.value) {
 
     // January 20 - February 18
 
@@ -100,7 +87,7 @@ function mySign() {
 
     // Else
 
-    if ((getMonth < 0) || (getMonth > 11) || getDay > 31)
+    if ((getMonth > 11) || getDay > 31)
         result.innerHTML = `<strong>Invalid Date</strong>`
 
 }
