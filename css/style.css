@@ -80,6 +80,10 @@ b {
     color: red
 }
 
+/* End Styling */
+
+/* Start Media Query */
+
 @media (max-width: 1200px) {
     section {
         width: 60vw
@@ -108,4 +112,4 @@ b {
     }
 }
 
-/* End Styling */
+/* End Media Query */
